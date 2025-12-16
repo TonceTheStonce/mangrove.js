@@ -11,7 +11,6 @@
     "precommit": "lint-staged",
     "prepack": "pinst --disable && yarn run build",
     "postpack": "pinst --enable",
-    "postinstall": "husky install",
     "lint": "npx eslint ./src/*.ts",
     "copyUni": "node copyUniBytecode.js",
     "build": "npm-run-all -pn --aggregate-output typechain lint write-contract-version-ranges copyUni && npm-run-all -pn --aggregate-output tscbuild esbuild && yarn make-cli-executable",
